@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class WorkbookController {
 
-    @GetMapping(value="/")
+    @GetMapping(value="/painting")
     public String getMethodName(Model model) {
+      model.addAttribute("painting", "mona-lisa");
+      // model.addAttribute("painting", "starry-night");
         return "painting";
     }
-    
+
 }
