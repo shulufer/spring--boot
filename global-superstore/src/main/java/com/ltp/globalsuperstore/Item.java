@@ -1,5 +1,6 @@
 package com.ltp.globalsuperstore;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
@@ -30,6 +31,12 @@ public class Item {
     this.date = date;
     this.id = UUID.randomUUID().toString();
   }
+
+  public String getFormatDate() {
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    return formatter.format(date);
+  }
+
 
   public String getCategory() {
     return this.category;
