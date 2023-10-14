@@ -1,7 +1,10 @@
 package com.ltp.globalsuperstore;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Item {
 
@@ -9,6 +12,7 @@ public class Item {
   private String name;
   private Double price;
   private Double discount;
+  @DateTimeFormat(pattern = "yyyy-MM-dd")
   private Date date;
   private String id;
 
@@ -22,9 +26,17 @@ public class Item {
     this.name = name;
     this.price = price;
     this.discount = discount;
+
+
     this.date = date;
     this.id = UUID.randomUUID().toString();
   }
+
+  public String getFormatDate() {
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+    return formatter.format(date);
+  }
+
 
   public String getCategory() {
     return this.category;
