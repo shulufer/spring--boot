@@ -26,8 +26,6 @@ public class Item {
     this.name = name;
     this.price = price;
     this.discount = discount;
-
-
     this.date = date;
     this.id = UUID.randomUUID().toString();
   }
@@ -83,5 +81,8 @@ public class Item {
     return this.id;
   }
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 }
