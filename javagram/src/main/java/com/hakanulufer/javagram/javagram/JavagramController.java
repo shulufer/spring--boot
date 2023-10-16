@@ -8,6 +8,13 @@ public class JavagramController {
 
     @GetMapping("/")
     public String getForm() {
-      return "form";
+      return "sign-up";
     }
+
+    @GetMapping("/result")
+    public String getResult() {
+        return "result";
+    }
+
+
 }
