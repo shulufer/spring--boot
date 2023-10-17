@@ -20,6 +20,7 @@ public class User {
   @Size(min = 2, message = "Last name is too short")
   private String lastName;
 
+  @Username(message = "Cannot contain special characters or uppercase characters")
   @NotBlank(message = "Username cannot be blank")
   @Size(min = 7, message = "Username is too short")
   private String userName;
