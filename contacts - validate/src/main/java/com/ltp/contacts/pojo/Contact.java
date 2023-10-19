@@ -2,16 +2,20 @@ package com.ltp.contacts.pojo;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotBlank;
+
 public class Contact {
 
     private String id;
+    @NotBlank(message = "Name connot be blank")
     private String name;
+    @NotBlank(message = "Number cannot be blank")
     private String phoneNumber;
 
 
     public Contact(){
         this.id = UUID.randomUUID().toString();
-    } 
+    }
 
     public String getName() {
         return this.name;
