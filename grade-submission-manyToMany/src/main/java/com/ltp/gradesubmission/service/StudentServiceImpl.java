@@ -31,8 +31,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void deleteStudent(Long id) {      
-        studentRepository.deleteById(id);  
+    public void deleteStudent(Long id) {
+        studentRepository.deleteById(id);
     }
 
     @Override
@@ -42,7 +42,8 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<Course> getEnrolledCourses(Long id) {
-        // TODO Auto-generated method stub
+
+
         return null;
     }
 

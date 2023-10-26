@@ -1,6 +1,7 @@
 package com.ltp.gradesubmission.entity;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -55,7 +56,7 @@ public class Course {
       joinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"),
       inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id")
       )
-    private List<Student> students;
+    private Set<Student> students;
 
 
 }
